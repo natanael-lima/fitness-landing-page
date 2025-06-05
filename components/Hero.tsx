@@ -8,8 +8,8 @@ export default function Hero() {
                         bg-radial-[at_50%_75%] from-lime-300 via-green-800 to-zinc-950 to-90% text-white p-8 relative overflow-hidden 
                         rounded-3xl shadow-xl">
       {/* Texto a la izquierda */}
-      <div className="w-full md:w-[40%] flex flex-col justify-center gap-3">
-        <h1 className="text-4xl md:text-8xl font-extrabold leading-tight">
+      <div className="w-full md:w-[50%] flex flex-col justify-center gap-2 mt-15">
+        <h1 className="text-5xl md:text-8xl font-extrabold leading-tight">
           Desafía Tus Propios Límites
         </h1>
         <p className="text-lg md:text-xl max-w-md">
@@ -18,13 +18,13 @@ export default function Hero() {
         
         {/* Botones principales */}
         <div className="flex flex-wrap gap-4 mt-4">
-          <button className="bg-lime-400 hover:bg-lime-600/95 text-zinc-900 px-6 py-3 rounded-full font-semibold transition flex items-center">
+          <button className="bg-lime-400 hover:bg-lime-600/95 text-lime-950 px-6 py-3 rounded-full font-semibold transition flex items-center">
             Unirse Ahora
             <MdKeyboardDoubleArrowRight className="text-xl" />
           </button>
           <div className="flex items-center gap-3">
             {/* Botón de Play solo ícono */}
-            <button className="bg-lime-400 hover:bg-lime-600/95 text-zinc-900 p-4 rounded-full font-semibold transition flex items-center justify-center">
+            <button className="bg-lime-400 hover:bg-lime-600/95 text-lime-950 p-4 rounded-full font-semibold transition flex items-center justify-center">
               <FaPlay className="text-xl" />
             </button>
 
@@ -48,10 +48,10 @@ export default function Hero() {
 
         {/* Badges estilo píldora */}
         <div className="flex flex-wrap gap-3 mt-6">
-          {["Funcional", "Cardio", "Musculacion", "Personal Training", "Nutrición", 'CrossFit', 'Estiramiento', 'Pilates', 'Fuerza'].map((tag) => (
+          {["Funcional", "Cardio", "Musculacion", "Personal Training", 'CrossFit','Pilates', 'Fuerza'].map((tag) => (
             <span
               key={tag}
-              className="px-4 py-2 border border-white rounded-full text-sm uppercase tracking-wide"
+              className="px-2 py-2 border border-white rounded-full text-sm uppercase tracking-wide"
             >
               {tag}
             </span>
@@ -62,7 +62,7 @@ export default function Hero() {
       {/* Imagen a la derecha */}
       <div className="w-full md:w-[60%] h-full flex justify-center items-center">
         <img
-          src="/images/3.png"
+          src="/images/1.png"
           alt="Hero"
           className="h-[110%] w-auto object-contain"
         />
