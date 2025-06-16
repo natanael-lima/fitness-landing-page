@@ -3,9 +3,10 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import OurServices from "@/components/OurServices";
+//import OurServices from "@/components/OurServices";
 import Pricing from "@/components/Pricing";
 import AboutUs from "@/components/AboutUs";
+import FitnessCarousel from "@/components/FitnessCarousel";
 
 
 
@@ -20,7 +21,7 @@ export default function Page() {
           </div>
            {/* Contenido centrado y más angosto */}
           <Header/>
-          <OurServices />
+          <FitnessCarousel/>
           <section className="py-12">
             
             <AboutUs />
