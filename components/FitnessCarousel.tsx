@@ -35,8 +35,7 @@ export default function FitnessCarousel() {
     <div className="w-full ">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 text-center">
-          <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">Fitness Classes</h2>
-          <p className="text-lg text-gray-600">Discover our wide range of fitness classes</p>
+          <h2 className="mb-4 text-3xl font-bold text-gray-100 sm:text-4xl">Fitness Classes</h2>
         </div>
 
         <div className="relative">
