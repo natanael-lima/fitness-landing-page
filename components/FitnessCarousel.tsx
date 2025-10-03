@@ -32,7 +32,7 @@ export default function FitnessCarousel() {
   const prevSlide = () => setCurrentIndex(prev => prev <= 0 ? maxIndex : prev - 1);
 
   return (
-    <div className="w-full ">
+    <section className="w-full h-[100vh] ">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 text-center">
           <h2 className="mb-4 text-3xl font-bold text-gray-100 sm:text-4xl">Fitness Classes</h2>
@@ -87,6 +87,6 @@ export default function FitnessCarousel() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

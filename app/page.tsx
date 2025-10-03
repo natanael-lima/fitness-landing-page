@@ -1,36 +1,49 @@
 "use client";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 //import OurServices from "@/components/OurServices";
 import Pricing from "@/components/Pricing";
 import AboutUs from "@/components/AboutUs";
 import FitnessCarousel from "@/components/FitnessCarousel";
+import Background from "@/components/Background";
+import Header from "@/components/Header";
 
 
 
 export default function Page() {
 
   return (
-      <main className="min-h-screen w-full bg-zinc-900 text-white">
-        
-          {/* Contenedor flex para centrar vertical y horizontalmente */}
-          <div className="flex items-center justify-center min-h-screen">
+      <main className="min-h-screen  w-full text-white">
+            <Header/>
+            <section className="relative">
             <Hero />
-          </div>
-           {/* Contenido centrado y más angosto */}
-          <Header/>
-          <FitnessCarousel/>
-          <section className="py-12">
+            <Background variant="start" />
+            </section>
             
-            <AboutUs />
-            <Pricing />
-            <Contact />
-          </section>
+            {/* AboutUs con fondo variante derecha */}
+            <section className="relative py-20">
+              <Background variant="right" />
+              <FitnessCarousel/>
+            </section>
+            
+            {/* AboutUs con fondo variante derecha */}
+            <section className="relative py-20">
+              <Background variant="center" />
+              <AboutUs />
+            </section>
+            {/* Pricing con fondo variante centro */}
+            <section className="relative py-20">
+              <Background variant="left" />
+              <Pricing />
+            </section>
+            {/* Contact con fondo variante izquierda */}
+            <section className="relative py-20">
+              <Background variant="right" />
+              <Contact />
+            </section>
           <Footer />
       </main>
-
   );
 }
 

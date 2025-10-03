@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function AboutUs() {
   return (
     <section className="w-[98%] mx-auto h-[100vh] flex flex-col md:flex-row items-center justify-between 
-                        bg-zinc-800 text-white p-8 relative overflow-hidden 
+                      text-white p-8 relative overflow-hidden 
                         rounded-3xl shadow-xl">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
