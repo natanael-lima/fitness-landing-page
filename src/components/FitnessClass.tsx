@@ -32,8 +32,8 @@ export default function FitnessClass() {
   const prevSlide = () => setCurrentIndex(prev => prev <= 0 ? maxIndex : prev - 1);
 
   return (
-    <section className="w-full h-[100vh] ">
-      <div className="mx-auto w-full md:max-w-[80%] px-4 sm:px-6 lg:px-8  ">
+    <section id="class" className="w-full mx-auto py-20 text-white relative overflow-hidden min-h-screen flex flex-col md:flex-row items-center justify-between">
+      <div className="mx-auto w-full md:max-w-[80%] px-4 sm:px-2 lg:px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4 text-lime-300">NUESTRAS CLASES</h2>
           <p className="text-lg text-gray-200 max-w-2xl mx-auto">
@@ -55,7 +55,7 @@ export default function FitnessClass() {
               style={{ transform: `translateX(-${currentIndex * (100 / cardsPerView)}%)` }}
             >
               {fitnessClasses.map(card => (
-                <div key={card.id} className="w-full flex-shrink-0 px-3 xl:w-1/4 lg:w-1/3 md:w-1/2 transform transition-transform duration-500 hover:scale-105 p-5  ">
+                <div key={card.id} className="w-full flex-shrink-0 px-3 xl:w-1/4 lg:w-1/3 md:w-1/2 transform transition-transform duration-500 hover:scale-105 p-5 ">
                   <FitnessCard card={card} />
                 </div>
               ))}
@@ -77,16 +77,16 @@ export default function FitnessClass() {
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
           <div className="text-center">
-            <div className="text-3xl font-bold text-lime-500">10+</div>
-            <div className="text-gray-200">Different Classes</div>
+            <div className="text-3xl font-bold text-lime-500">8+</div>
+            <div className="text-gray-200">Clases Diferentes</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-lime-500">50+</div>
-            <div className="text-gray-200">Weekly Sessions</div>
+            <div className="text-3xl font-bold text-lime-500">20+</div>
+            <div className="text-gray-200">Sesiones Semanales</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-lime-500">200+</div>
-            <div className="text-gray-200">Happy Members</div>
+            <div className="text-3xl font-bold text-lime-500">100+</div>
+            <div className="text-gray-200">Miembros Felices</div>
           </div>
         </div>
       </div>

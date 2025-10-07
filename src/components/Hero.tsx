@@ -4,7 +4,7 @@ import { MdKeyboardDoubleArrowRight } from 'react-icons/md'
 
 export default function Hero() {
   return (
-      <section className="h-[100vh] w-full flex flex-col md:flex-row items-center justify-center text-white p-8 relative overflow-hidden ">
+      <section id="home" className="h-[100vh] w-full flex flex-col md:flex-row items-center justify-center text-white p-8 relative overflow-hidden ">
         <div className="w-full md:max-w-[80%] h-[80vh] grid md:grid-cols-5 grid-cols-1 gap-2 px-0 md:px-10 ">
           {/* Columna 60% */}
           <div className="col-span-3 flex items-center justify-center ">
@@ -68,7 +68,7 @@ export default function Hero() {
               <img
                 src="/images/1.png"
                 alt="Hero"
-                className="w-auto object-contain gradientopacity-30 h-[100%] "
+                className="w-auto object-contain opacity-50 h-[100%] "
               />
             </div>
 

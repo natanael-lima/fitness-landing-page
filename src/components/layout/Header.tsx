@@ -20,8 +20,8 @@ export default function Header() {
   return (
     <header className={`fixed top-0 z-50 w-full transition-all duration-300 ${
         scrolled
-          ? "bg-neutral-100/5 backdrop-blur-xl shadow-xl"
-          : "bg-transparent"
+          ? "md:bg-neutral-100/5 md:backdrop-blur-xl md:shadow-xl bg-neutral-950/95"
+          : "bg-transparent "
       }`}>
       <div className="max-w-[80%] mx-auto flex items-center flex-row  justify-between px-0 md:px-8 py-5">
       {/* Logotipo */}
@@ -36,12 +36,12 @@ export default function Header() {
       </div>
       {/* Navegación desktop */}
       <nav className="hidden md:flex gap-6 text-gray-700 dark:text-gray-200">
-        <a href="#" className="hover:text-lime-300 transition font-medium">INICIO</a>
-        <a href="#" className="hover:text-lime-300 transition font-medium" >CLASES</a>
-        <a href="#" className="hover:text-lime-300 transition font-medium">PROGRAMAS</a>
-        <a href="#" className="hover:text-lime-300 transition font-medium">PRECIOS</a>
-        <a href="#" className="hover:text-lime-300 transition font-medium">SOBRE NOSOTROS</a>
-        <a href="#" className="hover:text-lime-300 transition font-medium">CONTACTO</a>
+        <a href="#home" className="hover:text-lime-300 transition font-medium">INICIO</a>
+        <a href="#class" className="hover:text-lime-300 transition font-medium" >CLASES</a>
+        <a href="#programs" className="hover:text-lime-300 transition font-medium">PROGRAMAS</a>
+        <a href="#pricing" className="hover:text-lime-300 transition font-medium">PRECIOS</a>
+        <a href="#about" className="hover:text-lime-300 transition font-medium">SOBRE NOSOTROS</a>
+        <a href="#contact" className="hover:text-lime-300 transition font-medium">CONTACTO</a>
       </nav>
 
       {/* Botón Desktop */}
@@ -69,35 +69,42 @@ export default function Header() {
           {/* Navegación móvil */}
           <nav className="flex flex-col gap-6 text-lg w-full">
             <a
-              href="#"
+              href="#home"
               className="hover:text-lime-500 transition"
               onClick={() => setMenuOpen(false)}
             >
               INICIO
             </a>
             <a
-              href="#"
+              href="#class"
               className="hover:text-lime-500 transition"
               onClick={() => setMenuOpen(false)}
             >
               CLASES
             </a>
             <a
-              href="#"
+              href="#programs"
               className="hover:text-lime-500 transition"
               onClick={() => setMenuOpen(false)}
             >
               PROGRAMAS
             </a>
             <a
-              href="#"
+              href="#pricing"
+              className="hover:text-lime-500 transition"
+              onClick={() => setMenuOpen(false)}
+            >
+              PRECIOS
+            </a>
+            <a
+              href="#about"
               className="hover:text-lime-500 transition"
               onClick={() => setMenuOpen(false)}
             >
               SOBRE NOSOTROS
             </a>
             <a
-              href="#"
+              href="#contact"
               className="hover:text-lime-500 transition"
               onClick={() => setMenuOpen(false)}
             >

@@ -18,11 +18,11 @@ export default function Page() {
   return (
       <main className="min-h-screen  w-full text-white">
             <Header/>
+            {/* Inicio */}
             <section className="relative">
             <Hero />
             <Background variant="start" />
             </section>
-            
             {/* Clases con fondo variante derecha */}
             <section className="relative py-10">
               <Background variant="right" />
@@ -40,12 +40,12 @@ export default function Page() {
             </section>
             {/* AboutUs con fondo variante derecha */}
             <section className="relative py-10">
-            <Background variant="center" />
-            <AboutUs />
+              <Background variant="right" />
+              <AboutUs />
             </section>
             {/* Contact con fondo variante izquierda */}
             <section className="relative py-10">
-              
+              <Background variant="center" />
               <Contact />
             </section>
           <Footer />
