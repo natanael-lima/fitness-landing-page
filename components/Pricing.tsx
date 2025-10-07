@@ -80,71 +80,77 @@ export default function Pricing() {
   };
 
   return (
-    <section className="w-[98%] mx-auto h-[100vh] flex flex-col md:flex-row items-center justify-between
-                         text-white p-8 relative overflow-hidden 
-                        rounded-3xl">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 text-gray-900">PLANES DE MEMBRESÍA</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Elige la frecuencia que se adapte a tu rutina fitness
-          </p>
-        </div>
+    <section className="w-full mx-auto min-h-screen flex flex-col md:flex-row items-center justify-between 
+  text-white p-8 relative overflow-hidden rounded-3xl bg-zinc-900/40 backdrop-blur-md">
+  
+  <div className="w-full md:max-w-[80%] mx-auto">
+    <div className="text-center mb-12">
+      <h2 className="text-4xl font-bold mb-4 text-lime-300">PLANES DE MEMBRESÍA</h2>
+      <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+        Elige la frecuencia que se adapte a tu rutina fitness
+      </p>
+    </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {plans.map((plan, index) => (
-            <div 
-              key={index}
-              className={`bg-white p-6 rounded-xl shadow-lg border-2 ${plan.popular ? 'border-red-500 transform md:scale-105 relative' : 'border-gray-200'}`}
-            >
-              {plan.popular && (
-                <div className="absolute top-0 right-0 bg-red-500 text-white px-3 py-1 text-xs font-bold rounded-bl-xl">
-                  POPULAR
-                </div>
-              )}
-              
-              <div className="mb-4">
-                <h3 className="text-2xl font-bold text-gray-900">{plan.name}</h3>
-                <p className="text-gray-600">{plan.frequency}</p>
-              </div>
-              
-              <div className="text-4xl font-bold mb-4 text-gray-900">
-                ${plan.price}<span className="text-lg text-gray-500">/mes</span>
-              </div>
-              
-              <ul className="space-y-3 mb-6">
-                {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-start">
-                    <FaCheck className="text-green-500 mt-1 mr-2 flex-shrink-0" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-                {plan.excluded.map((excluded, i) => (
-                  <li key={`excluded-${i}`} className="flex items-start text-gray-400">
-                    <FaCheck className="mr-2 mt-1 flex-shrink-0" />
-                    <span className="line-through">{excluded}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              <button 
-                onClick={() => sendWhatsAppMessage(plan)}
-                className={`w-full py-3 rounded-lg font-medium transition flex items-center justify-center ${
-                  plan.popular 
-                    ? 'bg-red-500 text-white hover:bg-red-600' 
-                    : 'bg-gray-800 text-white hover:bg-gray-700'
-                }`}
-              >
-                <FaWhatsapp className="mr-2" /> Únete ahora
-              </button>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {plans.map((plan, index) => (
+        <div 
+          key={index}
+          className={`relative p-6 rounded-xl border transition-all duration-300 
+          ${plan.popular 
+            ? 'bg-lime-400/10 hover:bg-lime-400/15 border-lime-300/40 shadow-lg shadow-lime-300/10 scale-105' 
+            : 'bg-lime-100/5 border-white/10 hover:border-lime-100/15 hover:bg-lime-100/10 '
+          }`}
+        >
+          {plan.popular && (
+            <div className="absolute top-0 right-0 bg-lime-400/80 text-black px-3 py-1 text-xs font-bold rounded-bl-xl">
+              POPULAR
             </div>
-          ))}
-        </div>
+          )}
 
-        <div className="mt-12 text-center text-gray-600">
-          <p>¿Necesitas un plan personalizado? Contáctanos directamente</p>
+          <div className="mb-4">
+            <h3 className="text-2xl font-bold text-lime-200">{plan.name}</h3>
+            <p className="text-gray-400">{plan.frequency}</p>
+          </div>
+
+          <div className="text-4xl font-bold mb-4 text-white">
+            ${plan.price}
+            <span className="text-lg text-gray-400">/mes</span>
+          </div>
+
+          <ul className="space-y-3 mb-6">
+            {plan.features.map((feature, i) => (
+              <li key={i} className="flex items-start">
+                <FaCheck className="text-lime-300 mt-1 mr-2 flex-shrink-0" />
+                <span className="text-gray-200">{feature}</span>
+              </li>
+            ))}
+            {plan.excluded.map((excluded, i) => (
+              <li key={`excluded-${i}`} className="flex items-start text-gray-500">
+                <FaCheck className="text-gray-600 mr-2 mt-1 flex-shrink-0" />
+                <span className="line-through">{excluded}</span>
+              </li>
+            ))}
+          </ul>
+
+          <button 
+            onClick={() => sendWhatsAppMessage(plan)}
+            className={`w-full py-3 rounded-lg font-medium transition flex items-center justify-center 
+              ${plan.popular 
+                ? 'bg-lime-400 text-black hover:bg-lime-300' 
+                : 'bg-lime-300/20 text-lime-200 hover:bg-lime-300/30'
+              }`}
+          >
+            <FaWhatsapp className="mr-2" /> Únete ahora
+          </button>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
+
+    <div className="mt-12 text-center text-gray-400">
+      <p>¿Necesitas un plan personalizado? <span className="text-lime-300 cursor-pointer hover:underline">Contáctanos directamente</span></p>
+    </div>
+  </div>
+</section>
+
   );
 }

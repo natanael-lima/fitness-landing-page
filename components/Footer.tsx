@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer() {
   return (
-        <footer className="bg-white rounded-3xl shadow ">
+        <footer className="bg-neutral-100/5 backdrop-blur-xl shadow-xl">
           <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
               <div className="sm:flex sm:items-center sm:justify-between">
                 
@@ -21,8 +21,8 @@ export default function Footer() {
                       </li>
                   </ul>
               </div>
-              <hr className="my-6 border-stone-200 sm:mx-auto dark:border-stone-400 lg:my-8" />
-              <span className="block text-sm text-stone-500 sm:text-center dark:text-gray-stone">© 2023 <a href="https://flowbite.com/" className="hover:underline">FlowN™</a>. All Rights Reserved.</span>
+              <hr className="my-6 border-stone-200 sm:mx-auto dark:border-stone-400 lg:my-6" />
+              <span className="block text-sm text-stone-200 sm:text-center dark:text-gray-stone">© 2023 <a href="https://flowbite.com/" className="hover:underline">FLORFIT™</a>. All Rights Reserved.</span>
           </div>
       </footer>
 

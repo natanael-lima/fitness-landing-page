@@ -5,7 +5,7 @@ import { MdKeyboardDoubleArrowRight } from 'react-icons/md'
 export default function Hero() {
   return (
       <section className="h-[100vh] w-full flex flex-col md:flex-row items-center justify-center text-white p-8 relative overflow-hidden ">
-        <div className="w-full md:max-w-[80%] h-[80vh] grid grid-cols-5 gap-2 px-10 ">
+        <div className="w-full md:max-w-[80%] h-[80vh] grid md:grid-cols-5 grid-cols-1 gap-2 px-0 md:px-10 ">
           {/* Columna 60% */}
           <div className="col-span-3 flex items-center justify-center ">
             {/* Texto a la izquierda */}

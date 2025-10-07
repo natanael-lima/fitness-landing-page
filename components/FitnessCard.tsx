@@ -1,7 +1,7 @@
 "use client";
 
+import { useState } from "react";
 import { FaClock, FaUserFriends } from "react-icons/fa";
-import { ReserveButton } from "./Button";
 
 interface FitnessCardProps {
   card: {
@@ -16,53 +16,69 @@ interface FitnessCardProps {
 }
 
 export const FitnessCard = ({ card }: FitnessCardProps) => {
+  const [openModal, setOpenModal] = useState(false);
 
   return (
-  <div className="group relative overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-300 hover:shadow-2xl">
-    {/* Contenedor de imagen con degradado y texto superpuesto */}
-    <div className="relative aspect-[2/3] overflow-hidden">
-      <img
-        src={card.image}
-        alt={card.title}
-        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-      />
-      
-      {/* Degradado en la parte inferior de la imagen */}
-      <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/90  0 to-transparent" />
-      
-      {/* Texto siempre visible sobre la imagen */}
-      <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-        <h3 className="font-bold">{card.title}</h3>
-        <p className="text-sm">
-          {card.duration} • {card.instructor}
-        </p>
+    <>
+     <div className="relative w-full max-w-md mx-auto h-96 rounded-xl overflow-hidden shadow-lg ">
+        {/* Imagen de fondo */}
+        <img
+          src={card.image}
+          alt={card.title}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        {/* Overlay oscuro */}
+        <div className="absolute inset-0 bg-black/50"></div>
+
+        {/* Nombre del coach arriba derecha */}
+        <div className="absolute top-3 right-3 px-3 py-1 rounded-full text-sm font-semibold text-white bg-black/50">
+          {card.instructor}
+        </div>
+
+        {/* Contenido inferior centrado */}
+        <div className="relative z-10 flex flex-col justify-end h-full p-6 text-white text-center">
+          <h3 className="text-3xl font-bold mb-2">{card.title}</h3>
+          <p className="text-gray-300 text-sm mb-4">{card.description}</p>
+          <button
+            onClick={() => setOpenModal(true)}
+            className="w-full bg-lime-50 hover:bg-lime-100 text-lime-900 inline-flex items-center justify-center rounded-md px-4 py-2 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2"
+          >
+            Ver más
+          </button>
+        </div>
       </div>
-    </div>
 
-    {/* Overlay que aparece al hacer hover */}
-    <div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      <div className="flex h-full flex-col justify-center p-6 text-white">
-        <h3 className="mb-2 text-xl font-bold">{card.title}</h3>
-        <p className="mb-4 text-sm leading-relaxed">{card.description}</p>
 
-        <div className="mb-4 space-y-2">
-          <div className="flex items-center gap-2 text-sm">
-            <FaClock className="h-4 w-4" />
-            <span>{card.duration}</span>
-          </div>
-          <div className="flex items-center gap-2 text-sm">
-            <FaUserFriends className="h-4 w-4" />
-            <span>{card.capacity}</span>
-          </div>
-          <div className="flex items-center gap-2 text-sm">
-            <span className="font-medium">Instructor:</span>
-            <span>{card.instructor}</span>
+
+      {/* Modal */}
+      {openModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+          <div className="bg-zinc-900 rounded-xl p-6 max-w-md w-full text-white relative">
+            {/* Botón de cerrar */}
+            <button
+              onClick={() => setOpenModal(false)}
+              className="absolute top-3 right-3 text-lime-400 hover:text-lime-200 text-xl font-bold"
+            >
+              ×
+            </button>
+
+            <h2 className="text-2xl font-bold mb-4">{card.title}</h2>
+            <p className="mb-4">{card.description}</p>
+
+            <div className="flex flex-col gap-2 mb-6">
+              <div className="flex items-center gap-2">
+                <FaClock className="text-lime-300" />
+                <span>Duración: {card.duration}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaUserFriends className="text-lime-300" />
+                <span>Capacidad: {card.capacity}</span>
+              </div>
+            </div>
           </div>
         </div>
-        
-        <ReserveButton />
-      </div>
-    </div>
-  </div>
-);
+      )}
+    </>
+  );
 };

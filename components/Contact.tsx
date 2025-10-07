@@ -8,8 +8,8 @@ export default function LocationSubscription() {
 };
 
   return (
-    <section className="w-full h-[100vh] mx-auto py-16 text-white px-4">
-      <div className="max-w-7xl mx-auto">
+    <section className="w-full mx-auto py-16 text-white px-4">
+      <div className="w-full md:max-w-[80%] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Columna 1: Suscripción por email */}
           <div className="bg-zinc-800 p-8 rounded-2xl shadow-xl">

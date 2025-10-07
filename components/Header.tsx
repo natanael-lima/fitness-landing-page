@@ -39,6 +39,7 @@ export default function Header() {
         <a href="#" className="hover:text-lime-300 transition font-medium">INICIO</a>
         <a href="#" className="hover:text-lime-300 transition font-medium" >NOSOTROS</a>
         <a href="#" className="hover:text-lime-300 transition font-medium">CLASES</a>
+        <a href="#" className="hover:text-lime-300 transition font-medium">PROGRAMAS</a>
         <a href="#" className="hover:text-lime-300 transition font-medium">PRECIOS</a>
         <a href="#" className="hover:text-lime-300 transition font-medium">CONTACTO</a>
       </nav>
@@ -49,7 +50,7 @@ export default function Header() {
       </button>
 
       {/* Botón Hamburguesa para móviles */}
-      <button className="md:hidden text-3xl text-lime-500"
+      <button className="md:hidden text-3xl text-white"
               onClick={() => setMenuOpen(true)}>
         <LuAlignLeft />
       </button>
