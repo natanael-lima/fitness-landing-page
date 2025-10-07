@@ -4,7 +4,7 @@ import React from 'react';
 export default function AboutUs() {
   return (
     <section id='about' className="w-full mx-auto py-16 text-white relative overflow-hidden min-h-screen flex flex-col md:flex-row items-center justify-between">
-      <div className="w-full md:max-w-[80%] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full md:max-w-[80%] mx-auto px-4 sm:px-2 lg:px-4">
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4 text-lime-300">SOBRE NOSOTROS</h2>
