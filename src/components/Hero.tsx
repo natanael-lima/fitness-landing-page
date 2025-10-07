@@ -19,13 +19,13 @@ export default function Hero() {
               
               {/* Botones principales */}
               <div className="flex flex-wrap gap-4 mt-4">
-                <button className="bg-lime-400 hover:bg-lime-600/95 text-lime-950 px-6 py-3 rounded-full font-semibold transition flex items-center">
+                <button className="px-6 py-3 rounded-full font-semibold flex items-center justify-center bg-lime-400 text-black hover:bg-lime-300 transition-all duration-300">
                   Unirse Ahora
                   <MdKeyboardDoubleArrowRight className="text-xl" />
                 </button>
                 <div className="flex items-center gap-3">
                   {/* Botón de Play solo ícono */}
-                  <button className="bg-lime-400 hover:bg-lime-600/95 text-lime-950 p-4 rounded-full font-semibold transition flex items-center justify-center">
+                  <button className="bg-lime-400 text-black hover:bg-lime-300 transition-all duration-300 p-4 rounded-full font-semibold flex items-center justify-center">
                     <FaPlay className="text-xl" />
                   </button>
 
@@ -52,7 +52,7 @@ export default function Hero() {
                 {["Funcional", "Cardio", "Musculacion", "Personal Training", 'CrossFit','Pilates', 'Fuerza'].map((tag) => (
                   <span
                     key={tag}
-                    className="px-2 py-2 border border-white/60 text-white/90 rounded-full text-xs uppercase tracking-wide"
+                    className="px-2 py-2 border border-lime-200/45 text-lime-200/80 rounded-full text-xs uppercase tracking-wide"
                   >
                     {tag}
                   </span>
@@ -64,13 +64,14 @@ export default function Hero() {
           {/* Columna 40% */}
           <div className="col-span-2 flex items-center justify-center hidden md:block">
             {/* Imagen a la derecha */}
-            <div className="h-full flex justify-center items-center">
+            <div className="absolute h-full flex justify-center items-center">
               <img
                 src="/images/1.png"
                 alt="Hero"
-                className="w-auto object-contain"
+                className="w-auto object-contain gradientopacity-30 h-[100%] "
               />
             </div>
+
           </div>
         </div>
         {/* Botón scroll-down */}

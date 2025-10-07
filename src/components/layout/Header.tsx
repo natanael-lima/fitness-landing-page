@@ -37,15 +37,15 @@ export default function Header() {
       {/* Navegación desktop */}
       <nav className="hidden md:flex gap-6 text-gray-700 dark:text-gray-200">
         <a href="#" className="hover:text-lime-300 transition font-medium">INICIO</a>
-        <a href="#" className="hover:text-lime-300 transition font-medium" >NOSOTROS</a>
-        <a href="#" className="hover:text-lime-300 transition font-medium">CLASES</a>
+        <a href="#" className="hover:text-lime-300 transition font-medium" >CLASES</a>
         <a href="#" className="hover:text-lime-300 transition font-medium">PROGRAMAS</a>
         <a href="#" className="hover:text-lime-300 transition font-medium">PRECIOS</a>
+        <a href="#" className="hover:text-lime-300 transition font-medium">SOBRE NOSOTROS</a>
         <a href="#" className="hover:text-lime-300 transition font-medium">CONTACTO</a>
       </nav>
 
       {/* Botón Desktop */}
-      <button className="hidden md:block bg-lime-300 hover:bg-lime-400/95 text-lime-950 px-4 py-2 rounded-4xl transition font-medium">
+      <button className="hidden md:block bg-lime-400 text-black hover:bg-lime-300 transition-all duration-300 p-4 font-semibold px-4 py-2 rounded-4xl">
         ENVIAR WHATSAPP
       </button>
 
@@ -57,7 +57,7 @@ export default function Header() {
 
       {/* Menú lateral móvil */}
       {menuOpen && (
-        <div className="fixed inset-0 z-50 bg-zinc-900 text-white flex flex-col items-start px-6 py-6 animate-slide-in">
+        <div className="fixed inset-0 z-50 bg-neutral-950 text-white flex flex-col items-start px-6 py-6 animate-slide-in">
           {/* Botón cerrar */}
           <button
             className="self-end text-3xl text-lime-400 mb-6"
@@ -73,42 +73,42 @@ export default function Header() {
               className="hover:text-lime-500 transition"
               onClick={() => setMenuOpen(false)}
             >
-              Inicio
+              INICIO
             </a>
             <a
               href="#"
               className="hover:text-lime-500 transition"
               onClick={() => setMenuOpen(false)}
             >
-              Nosotros
+              CLASES
             </a>
             <a
               href="#"
               className="hover:text-lime-500 transition"
               onClick={() => setMenuOpen(false)}
             >
-              Servicios
+              PROGRAMAS
             </a>
             <a
               href="#"
               className="hover:text-lime-500 transition"
               onClick={() => setMenuOpen(false)}
             >
-              Precios
+              SOBRE NOSOTROS
             </a>
             <a
               href="#"
               className="hover:text-lime-500 transition"
               onClick={() => setMenuOpen(false)}
             >
-              Contacto
+              CONTACTO
             </a>
 
             <button
               onClick={() => setMenuOpen(false)}
-              className="mt-6 bg-lime-400 hover:bg-lime-600/95 text-lime-950 px-4 py-2 rounded-4xl font-medium transition w-full"
+              className="mt-6 bg-lime-400 text-black hover:bg-lime-300 transition-all duration-300 p-4 font-semibold px-4 py-2 rounded-4xl w-full"
             >
-              Mensaje Directo
+              ENVIAR WHATSAPP
             </button>
           </nav>
         </div>

@@ -3,13 +3,13 @@ import Image from 'next/image';
 
 export default function AboutUs() {
   return (
-    <section className="w-full mx-auto flex flex-col md:flex-row items-center justify-between text-white p-8 relative overflow-hidden">
+    <section className="w-full mx-auto flex flex-col md:flex-row items-center justify-between text-white p-8 relative overflow-hidden h-[100vh]">
   <div className="w-full md:max-w-[80%] mx-auto">
     {/* Header */}
-    <div className="text-center mb-16">
-      <h2 className="text-5xl font-bold mb-3">Sobre Nosotros</h2>
-      <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-        Todo lo que necesitas para transformar tu cuerpo y mente.
+    <div className="text-center mb-12">
+      <h2 className="text-4xl font-bold mb-4 text-lime-300">SOBRE NOSOTROS</h2>
+      <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+         Todo lo que necesitas para transformar tu cuerpo y mente.
       </p>
     </div>
 

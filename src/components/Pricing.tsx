@@ -81,7 +81,7 @@ export default function Pricing() {
 
   return (
     <section className="w-full mx-auto min-h-screen flex flex-col md:flex-row items-center justify-between 
-  text-white p-8 relative overflow-hidden rounded-3xl bg-zinc-900/40 backdrop-blur-md">
+  text-white p-8 relative overflow-hidden rounded-3xl ">
   
   <div className="w-full md:max-w-[80%] mx-auto">
     <div className="text-center mb-12">

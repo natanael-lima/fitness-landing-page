@@ -36,8 +36,8 @@ export default function Programs() {
             </p>
           </div>
           <div className="flex justify-end mt-4">
-            <button className="px-4 py-2 bg-lime-400/20 border border-lime-300/40 text-lime-200 rounded-lg text-sm font-medium hover:bg-lime-400/30 transition-all duration-300">
-              Ver precios
+            <button className="px-4 py-3 bg-lime-300/20 text-lime-200 hover:bg-lime-300/30 rounded-lg text-sm font-medium transition-all duration-300">
+              Ver precio
             </button>
           </div>
         </div>
@@ -55,7 +55,7 @@ export default function Programs() {
           </div>
           <FaFire className="text-[25rem] text-lime-200 opacity-20 mx-auto mt-4" />
           <div className="flex justify-end mt-4">
-            <button className="px-4 py-2 bg-lime-400/20 border border-lime-300/40 text-lime-200 rounded-lg text-sm font-medium hover:bg-lime-400/30 transition-all duration-300">
+            <button className="px-4 py-3 bg-lime-300/20 text-lime-200 hover:bg-lime-300/30 rounded-lg text-sm font-medium transition-all duration-300">
               Ver precios
             </button>
           </div>
@@ -73,7 +73,7 @@ export default function Programs() {
               Programa estructurado para desarrollar fuerza y volumen con técnicas de sobrecarga progresiva.
             </p>
             <div className="flex justify-center sm:justify-start">
-              <button className="px-4 py-2 bg-lime-400/20 border border-lime-300/40 text-lime-200 rounded-lg text-sm font-medium hover:bg-lime-400/30 transition-all duration-300">
+              <button className="px-4 py-3 bg-lime-300/20 text-lime-200 hover:bg-lime-300/30 rounded-lg text-sm font-medium transition-all duration-300">
                 Ver precios
               </button>
             </div>
@@ -92,7 +92,7 @@ export default function Programs() {
               Entrenamientos que mejoran potencia, resistencia y agilidad con planes adaptados a tu disciplina.
             </p>
             <div className="flex justify-center sm:justify-start">
-              <button className="px-4 py-2 bg-lime-400/20 border border-lime-300/40 text-lime-200 rounded-lg text-sm font-medium hover:bg-lime-400/30 transition-all duration-300">
+              <button className="px-4 py-3 bg-lime-300/20 text-lime-200 hover:bg-lime-300/30 rounded-lg text-sm font-medium transition-all duration-300">
                 Ver precios
               </button>
             </div>
@@ -112,7 +112,7 @@ export default function Programs() {
           </div>
           <FaUserTie className="text-[8rem] text-lime-200 opacity-20 mx-auto mt-4" />
           <div className="flex justify-end mt-4">
-            <button className="px-4 py-2 bg-lime-400/20 border border-lime-300/40 text-lime-200 rounded-lg text-sm font-medium hover:bg-lime-400/30 transition-all duration-300">
+            <button className="px-4 py-3 bg-lime-300/20 text-lime-200 hover:bg-lime-300/30 rounded-lg text-sm font-medium transition-all duration-300">
               Ver precios
             </button>
           </div>

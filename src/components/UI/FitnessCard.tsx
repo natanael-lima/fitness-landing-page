@@ -25,40 +25,38 @@ export const FitnessCard = ({ card }: FitnessCardProps) => {
         <img
           src={card.image}
           alt={card.title}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover "
         />
 
         {/* Overlay oscuro */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-lime-900/50  transition-all duration-300 rounded-xl "></div>
 
         {/* Nombre del coach arriba derecha */}
         <div className="absolute top-3 right-3 px-3 py-1 rounded-full text-sm font-semibold text-white bg-black/50">
-          {card.instructor}
+          Coach {card.instructor}
         </div>
 
         {/* Contenido inferior centrado */}
         <div className="relative z-10 flex flex-col justify-end h-full p-6 text-white text-center">
-          <h3 className="text-3xl font-bold mb-2">{card.title}</h3>
-          <p className="text-gray-300 text-sm mb-4">{card.description}</p>
+          <h3 className=" text-3xl font-bold mb-2">{card.title}</h3>
+          <p className="text-gray-200 text-sm mb-4">{card.description}</p>
           <button
             onClick={() => setOpenModal(true)}
-            className="w-full bg-lime-50 hover:bg-lime-100 text-lime-900 inline-flex items-center justify-center rounded-md px-4 py-2 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2"
+            className="font-medium rounded-lg bg-lime-400 text-black hover:bg-lime-300  inline-flex items-center justify-center px-4 py-2 transition-colors focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2"
           >
             Ver más
           </button>
         </div>
       </div>
 
-
-
       {/* Modal */}
       {openModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-          <div className="bg-zinc-900 rounded-xl p-6 max-w-md w-full text-white relative">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-5">
+          <div className="bg-neutral-950/90 rounded-xl p-6 max-w-md w-full text-white relative">
             {/* Botón de cerrar */}
             <button
               onClick={() => setOpenModal(false)}
-              className="absolute top-3 right-3 text-lime-400 hover:text-lime-200 text-xl font-bold"
+              className="absolute top-3 right-3 text-lime-300 hover:text-lime-200 text-xl font-bold"
             >
               ×
             </button>

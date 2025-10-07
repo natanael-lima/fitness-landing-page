@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { FitnessCard } from "./FitnessCard";
-import { ControlsClass } from "./ControlsClass";
-import { fitnessClasses } from "./data";
+import { FitnessCard } from "./UI/FitnessCard";
+import { ControlsClass } from "./UI/ControlsClass";
+import { fitnessClasses } from "../lib/data";
 
 export default function FitnessClass() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,11 +34,9 @@ export default function FitnessClass() {
   return (
     <section className="w-full h-[100vh] ">
       <div className="mx-auto w-full md:max-w-[80%] px-4 sm:px-6 lg:px-8  ">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-3">
-            Nuestras Clases
-          </h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4 text-lime-300">NUESTRAS CLASES</h2>
+          <p className="text-lg text-gray-200 max-w-2xl mx-auto">
             Diseñados para transformar tu cuerpo y tu mente, adaptados a cada nivel y objetivo.
           </p>
         </div>
@@ -57,7 +55,7 @@ export default function FitnessClass() {
               style={{ transform: `translateX(-${currentIndex * (100 / cardsPerView)}%)` }}
             >
               {fitnessClasses.map(card => (
-                <div key={card.id} className="w-full flex-shrink-0 px-3 xl:w-1/4 lg:w-1/3 md:w-1/2 transform transition-transform duration-500 hover:scale-105 p-5">
+                <div key={card.id} className="w-full flex-shrink-0 px-3 xl:w-1/4 lg:w-1/3 md:w-1/2 transform transition-transform duration-500 hover:scale-105 p-5  ">
                   <FitnessCard card={card} />
                 </div>
               ))}
